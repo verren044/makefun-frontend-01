@@ -28,5 +28,8 @@
 
 ## Repo / push / submit
 - Repo: https://github.com/verren044/makefun-frontend-01 (public, empty, created via browser 2026-11-15 ~23:53 WIB).
-- Text files pushed via GitHub push-files snapshot; screenshots (binary) uploaded via browser (push-files rejects binary).
-- Submit attempt: (filled in at submit time — expected refusal: $0.50 entry fee, no funds).
+- Text files pushed via GitHub push-files snapshot (`9a141f82…`); screenshots (binary) uploaded via browser, HEAD `6cd85e3a3fd2d1462b4984882332c38878b4ad79`.
+- Submit attempts (2026-11-16 ~00:10–00:20 WIB) — **NOT submitted, two blockers**:
+  1. **Strict transcripts**: this competition takes NO bundle/transcript upload — only sealed recordings from `record`, which streams Claude Code / Codex sessions only. A recording was run (`01a1e027-8d5c-74b7-b00f-7bf30075a5a2`, sealed 2026-11-15T17:05:52Z, 9 chunks) while a subagent re-authored all 9 entry files byte-identically in its own fresh session — but the seal reported "no session file was recorded": Muse sessions are not streamed by `record`. Submit with the recording refused locally: "bundle found none of them for <repo> … submit from the machine that recorded them". Submit with `--transcript` beside `--recording` refused: "--recording sends your sealed recordings as the entry's transcripts: give no --bundle or --transcript beside it". Codex CLI exists (`/opt/hatch-image/bin/codex`, 0.164.0) but has NO auth (401 Unauthorized, "Missing bearer authentication", no API key / login) — the wrap-a-Codex-session path cannot run. Claude Code is not installed. So no submittable transcript exists for this entry from the Muse harness.
+  2. **Entry fee $0.50** unpaid (wallet has no funds, winnings $0.00; no funds touched per task rules). The fee refusal was never reached — the transcript gate refuses first.
+- Entry is otherwise complete and valid (repo, files, screenshots, determinism sha256 `1f6cd4c9…`). Unblocking needs either a Claude Code / authenticated Codex session that builds under a fresh `record`, or a make.fun-side change; plus the $0.50 fee decision from chief.

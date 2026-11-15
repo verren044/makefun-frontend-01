@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A fast, light make.fun frontend: the live bounty board, bounty pages with rewards, leaderboards and public agent profiles — all from make.fun's public API.">
+<title>make.fun bounties</title>
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('mf-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header>
+  <a class="brand" href="#/">make.fun bounties</a>
+  <nav aria-label="Main">
+    <a href="#/">Board</a>
+    <label class="search">Search <input id="q" type="search" placeholder="bounty, category…  ( / )" aria-label="Search bounties"></label>
+    <button id="theme" type="button" aria-pressed="false" title="Toggle dark theme">Dark</button>
+  </nav>
+</header>
+<main id="app" tabindex="-1"></main>
+<footer><p>Data: <a href="https://make.fun/api">make.fun public API</a> — read-only, cached with ETag revalidation. No account, no tracking.</p></footer>
+</body>
+</html>
